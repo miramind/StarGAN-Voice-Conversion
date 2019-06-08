@@ -1,9 +1,7 @@
 from torch.utils import data
 import torch
-import os
-import random
 import glob
-from os.path import join, basename, dirname, split
+from os.path import join, basename
 import numpy as np
 
 # Below is the accent info for the used 10 speakers.

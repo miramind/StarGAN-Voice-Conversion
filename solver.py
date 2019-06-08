@@ -1,19 +1,14 @@
 from model import Generator
 from model import Discriminator
-from torch.autograd import Variable
-from torchvision.utils import save_image
 import torch
 import torch.nn.functional as F
-import numpy as np
-import os
-from os.path import join, basename, dirname, split
+from os.path import join, basename
 import time
 import datetime
 from data_loader import to_categorical
-import librosa
 from utils import *
 from tqdm import tqdm
-
+import os
 
 class Solver(object):
     """Solver for training and testing StarGAN."""

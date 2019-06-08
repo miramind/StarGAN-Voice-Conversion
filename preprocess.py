@@ -1,15 +1,12 @@
-import librosa
-import numpy as np
-import os, sys
+import sys
 import argparse
 import pyworld
+import os
 from multiprocessing import cpu_count
 from concurrent.futures import ProcessPoolExecutor
 from functools import partial
 from utils import *
 from tqdm import tqdm
-from collections import defaultdict
-from collections import namedtuple
 from sklearn.model_selection import train_test_split
 import glob
 from os.path import join, basename
@@ -81,10 +78,10 @@ if __name__ == '__main__':
 
 
     sample_rate_default = 16000
-    origin_wavpath_default = "./data/VCTK-Corpus/wav48"
-    target_wavpath_default = "./data/VCTK-Corpus/wav16"
-    mc_dir_train_default = './data/mc/train'
-    mc_dir_test_default = './data/mc/test'
+    origin_wavpath_default = "/media/jacob/DATA_DRIVE1/DATA/SPEECH/VCTK-Corpus/wav48"
+    target_wavpath_default = "/media/jacob/DATA_DRIVE1/DATA/SPEECH/VCTK-Corpus/wav16"
+    mc_dir_train_default = '/media/jacob/DATA_DRIVE1/DATA/SPEECH/mc/train'
+    mc_dir_test_default = '/media/jacob/DATA_DRIVE1/DATA/SPEECH/mc/test'
 
     parser.add_argument("--sample_rate", type = int, default = 16000, help = "Sample rate.")
     parser.add_argument("--origin_wavpath", type = str, default = origin_wavpath_default, help = "The original wav path to resample.")
